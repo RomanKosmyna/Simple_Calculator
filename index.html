@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple calculator</title>
+</head>
+<body>
+
+<div class="main-container">
+  <div class="output-window">
+    <div class="number-output"></div>
+    <div class="operation-output"></div>
+  </div>
+  <div class="button-container">
+    <button onclick=deleteAll() class="clear-all-data target">AC</button>
+    <button onclick=operate('%') class="operation">%</button>
+    <button onclick=operate('÷') class="operation">÷</button>
+    <button onclick=calculator(1) class="number">1</button>
+    <button onclick=calculator(2) class="number">2</button>
+    <button onclick=calculator(3) class="number">3</button>
+    <button onclick=operate('*') class="operation">*</button>
+    <button onclick=calculator(4) class="number">4</button>
+    <button onclick=calculator(5) class="number">5</button>
+    <button onclick=calculator(6) class="number">6</button>
+    <button onclick=operate('+') class="operation">+</button>
+    <button onclick=calculator(7) class="number">7</button>
+    <button onclick=calculator(8) class="number">8</button>
+    <button onclick=calculator(9) class="number">9</button>
+    <button onclick=operate('-') class="operation">-</button>
+    <button onclick=calculator('.') class="operation">.</button>
+    <button onclick=calculator(0) class="number">0</button>
+    <button onclick="result()" class="equals target">=</button>
+  </div>
+</div>
+
+<script src="data.js"></script>
+</body>
+<style>
+  body {
+    margin: 0;
+    background: lightcyan;
+    display: flex;
+    justify-content: center;
+  }
+  .main-container {
+    width: 410px;
+    margin-top: 150px;
+    background: aquamarine;
+    font-family: "Arial Black", sans-serif;
+  }
+
+  .output-window {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: darkslateblue;
+    color: white;
+    font-size: 38px;
+  }
+
+  .number-output {
+    margin-left: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  button {
+    height: 80px;
+    width: 95px;
+    margin-top: 3px;
+    border: none;
+    color: white;
+    background: #172D13;
+    font-size: 28px;
+    font-family: "Arial Black", sans-serif;
+  }
+
+  .target {
+    width: 200px;
+    background: #D76F30;
+  }
+
+  button:hover {
+    background: darkgreen;
+    color: #D76F30;
+  }
+
+  .target:hover {
+    background: darkorange;
+    color: black;
+  }
+</style>
+</html>
